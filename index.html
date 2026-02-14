@@ -2,135 +2,151 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Flip! – Fast One-Tap Flip Game</title>
+    <title>Flip! – One Tap Flip Game</title>
 
     <!-- SEO Meta -->
-    <meta name="description" content="Flip! is a fast, fun, one-tap flipping game. Time your jump, land perfectly, and build combos in this addictive casual experience.">
-    <meta name="keywords" content="Flip game, casual game, one tap game, flip jump game, android casual game, Basara Studio">
+    <meta name="description" content="Flip! is a fast, fun, one-tap flipping game. Time your jump, land perfectly, and build combos.">
+    <meta name="keywords" content="Flip game, casual game, one tap game, flip jump game, android casual game">
     <meta name="author" content="Basara Studio">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Open Graph (for sharing) -->
+    <!-- Open Graph -->
     <meta property="og:title" content="Flip! – One Tap Flip Game">
-    <meta property="og:description" content="Time your jump, land perfectly, and build combos in this addictive one-tap flip game.">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="hero.png">
-    <meta property="og:url" content="https://YOUR_USERNAME.github.io/REPO_NAME/">
+    <meta property="og:description" content="Time your jump, land perfectly, and build combos.">
+    <meta property="og:image" content="images/bg.jpg">
 
-    <!-- Google Fonts -->
+    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
     <style>
         body {
             margin: 0;
             font-family: 'Inter', sans-serif;
+            color: white;
+            background: #000;
+        }
+
+        .hero {
+            height: 100vh;
+            background: url('images/bg.jpg') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.45);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 700px;
+            padding: 20px;
+        }
+
+        .logo {
+            font-family: 'Bangers', cursive;
+            font-size: 90px;
+            letter-spacing: 3px;
+            margin: 0;
+        }
+
+        .tagline {
+            font-size: 22px;
+            margin: 15px 0 30px;
+            opacity: 0.9;
+        }
+
+        .play-button {
+            display: inline-block;
+            padding: 16px 36px;
+            background: #2ecc71;
+            color: white;
+            font-size: 18px;
+            font-weight: 600;
+            border-radius: 12px;
+            text-decoration: none;
+            transition: 0.2s ease;
+        }
+
+        .play-button:hover {
+            transform: scale(1.07);
+        }
+
+        .section {
+            padding: 80px 20px;
             background: #ffffff;
             color: #222;
+            text-align: center;
         }
 
         .container {
             max-width: 900px;
             margin: auto;
-            padding: 20px;
-        }
-
-        header {
-            text-align: center;
-            padding: 40px 20px 20px;
-        }
-
-        .logo {
-            font-family: 'Bangers', cursive;
-            font-size: 64px;
-            color: #ff3b30;
-            letter-spacing: 2px;
-            margin: 0;
-        }
-
-        .tagline {
-            font-size: 18px;
-            color: #666;
-            margin-top: 10px;
-        }
-
-        .hero {
-            text-align: center;
-            margin: 40px 0;
-        }
-
-        .hero img {
-            width: 100%;
-            max-width: 420px;
-            border-radius: 16px;
-        }
-
-        .play-button {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 14px 28px;
-            background: #2ecc71;
-            color: white;
-            font-weight: 600;
-            border-radius: 10px;
-            text-decoration: none;
-            transition: 0.2s;
-        }
-
-        .play-button:hover {
-            transform: scale(1.05);
-        }
-
-        section {
-            margin: 50px 0;
         }
 
         h2 {
-            font-size: 28px;
-            margin-bottom: 10px;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin: 10px 0;
+            font-size: 18px;
         }
 
         footer {
+            background: #111;
+            color: #aaa;
             text-align: center;
-            margin-top: 60px;
-            padding: 20px;
-            color: #777;
-            font-size: 14px;
+            padding: 30px 20px;
         }
 
         footer a {
-            color: #2a7ae2;
+            color: #2ecc71;
             text-decoration: none;
         }
     </style>
 </head>
 <body>
 
-<div class="container">
-
-    <header>
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-content">
         <h1 class="logo">FLIP!</h1>
-        <p class="tagline">Tap, flip, and land perfectly.</p>
-    </header>
-
-    <div class="hero">
-        <!-- Replace hero.png with your actual screenshot -->
-        <img src="hero.png" alt="Flip game screenshot">
-        <br>
+        <p class="tagline">Tap. Flip. Land perfectly.</p>
         <a class="play-button" href="#" target="_blank">
             Play on Google Play
         </a>
     </div>
+</section>
 
-    <section>
+<!-- ABOUT -->
+<section class="section">
+    <div class="container">
         <h2>About the Game</h2>
         <p>
             Flip! is a fast, one-tap casual game where timing is everything.
             Charge your jump, perform smooth flips, and land perfectly to build combos.
             Easy to play, hard to master.
         </p>
-    </section>
+    </div>
+</section>
 
-    <section>
+<!-- FEATURES -->
+<section class="section" style="background:#f4f4f4;">
+    <div class="container">
         <h2>Features</h2>
         <ul>
             <li>Simple one-tap controls</li>
@@ -139,16 +155,16 @@
             <li>Quick, addictive sessions</li>
             <li>Minimal, colorful design</li>
         </ul>
-    </section>
+    </div>
+</section>
 
-    <footer>
-        <p>
-            © 2026 Basara Studio<br>
-            <a href="privacy.html">Privacy Policy</a>
-        </p>
-    </footer>
-
-</div>
+<!-- FOOTER -->
+<footer>
+    <p>
+        © 2026 Basara Studio<br>
+        <a href="privacy.html">Privacy Policy</a>
+    </p>
+</footer>
 
 </body>
 </html>
